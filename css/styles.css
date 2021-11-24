@@ -1,0 +1,36 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+*{
+    --back-color: gray;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: var(--back-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0vh 5vh;
+}
+
+.nav-link {
+    margin: 1vh;
+}
+
+main{
+    background-color: rgb(54, 54, 54);
+}
+
+.cart-info{
+    width: 60vh;
+    height: 94vh;
+    background-color: red;
+}
+footer{
+    background-color: var(--back-color);
+    display: flex;
+    justify-content: center;
+}
