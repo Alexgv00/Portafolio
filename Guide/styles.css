@@ -1,0 +1,111 @@
+:root{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --i-primary: #9FACF5;
+  --i-secondary: #2E97F5;
+  --transition-speed: 600ms;
+}
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+body{
+  padding: 0;
+  margin: 0;
+  color: black;
+  background-color: white;
+}
+
+body::-webkit-scrollbar{
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+  background: #1e1e24;
+}
+body::-webkit-scrollbar{
+  background: #6649b8;
+}
+main{
+  margin-left: 5rem;
+  padding: 1rem;
+  
+}
+.navbar{
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background: var(--bg-primary);
+  transition: width 200ms ease;
+}
+
+.navbar-nav{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem; 
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition: var(--transition-speed);
+}
+.nav-link:hover .bi{
+  color: var(--i-secondary);
+  transition: var(--transition-speed);
+}
+
+.link-text{
+  display: none;
+  margin: 1rem;
+}
+.nav-link svg{
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.navbar:hover{
+  width: 16rem;
+}
+.navbar:hover .link-text{
+  display: block;
+}
+.bi {
+  color: var(--i-primary);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 00.3ch;
+  width: 100%;
+}
+.logo svg{
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+.navbar:hover .logo svg{
+  transform: rotate(-180deg);
+}

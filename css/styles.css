@@ -8,13 +8,19 @@
     --i-primary: #9FACF5;
     --i-secondary: #2E97F5;
     --transition-speed: 600ms;
+    --bg-page: rgb(35,35,46);
+    --hover: rgba(35,35,46,0.5);
+    --bg-gradient:linear-gradient(153deg, rgba(35,35,46,1) 25%, rgba(69,69,78,1) 75%, rgba(80,80,94,1) 100%);
+    --bg-incibe: rgb(229,41,56);
+    --bg-gradient-incibe: linear-gradient(90deg, rgba(229,41,56,1) 25%, rgba(255,221,0,1) 50%, rgba(255,255,255,1) 75%);
   }
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
   body{
     padding: 0;
     margin: 0;
     color: black;
-    background-color: white;
+    background: var(--bg-page);
+    background: var(--bg-gradient);
   }
   
   body::-webkit-scrollbar{
@@ -109,3 +115,151 @@
   .navbar:hover .logo svg{
     transform: rotate(-180deg);
   }
+
+  main{
+    height: 100vh;
+    margin-left: 5rem;
+    /* padding: 2.5rem 0rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--bg-page) ;
+    background: var(--bg-gradient); */
+}
+
+.container{
+    height: 80vh;
+    width: 80vh;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    'name  img'
+    'desc desc '
+    ;
+
+}
+.container div, .container .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.name{
+    grid-area: name;
+    letter-spacing: 00.3ch;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+}
+.img {
+    grid-area: img;
+}
+.desc{
+    grid-area: desc;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.container img{
+    display: inline-block;
+    height: auto;
+    width: 5rem;
+    border-radius: 8rem;
+}
+.container p{
+  color: var(--text-primary);
+  letter-spacing: 00.05ch;
+  font-weight: bolder;
+}
+
+.btn a{
+    margin-top: 5rem;
+    padding: 10px 20px;
+    display: inline-block;
+    background: var(--bg-incibe);
+    background: var(--bg-gradient-incibe);
+    color: var(--bg-secondary);
+    font-weight: bolder;
+    text-decoration: none;
+
+    border-radius: 4px;
+    box-shadow: 1px 1px 8px 0px #1c1c1c;
+    transition: .3s;
+}
+
+/* Empieza el contenido */
+.contain{
+  height: 100vh;
+  margin-left: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  'spoti fashion nletter'
+  'sneaker marvel cybercamp'
+  ;
+  gap: 1rem;
+}
+.contain h1{
+  background-color: var(--hover);
+  color: var(--text-secondary);
+  width: 40%;
+}
+article{
+  height: 60vh;
+  width: 60vh;
+}
+article p{
+  display: none;
+}
+article:hover p{
+  width: 75%;
+  display: block;
+  background-color: rgba(255,255,255,0.3);
+  color: var(--i-secondary);
+  font-weight: bolder;
+  text-shadow: 2px 2px black;
+  font-size: 1.5rem;
+}
+.spoti{
+  background-image: url(../img/Spotiffy.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: spoti;
+}
+.fashion{
+  background-image: url(../img/ubrbanfashion.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: fashion;
+}
+.nletter{
+  background-image: url(../img/newsletter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: nletter;
+}
+.sneaker{
+  background-image: url(../img/sneaker.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: sneaker;
+}
+.marvel{
+  background-image: url(../img/marvel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: marvel;
+}
+.cybercamp{
+  background-image: url(../img/cyber.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: cybercamp;
+}
+@media screen and (max-width: 480px) {
+
+}
